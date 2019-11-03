@@ -1,0 +1,99 @@
+@import './variables.scss';
+
+@font-face {
+	font-family: "futura";
+	src: url("./assets/fonts/futura/Anonymous.woff2") format("woff2"),
+		 url("./assets/fonts/futura/Anonymous.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+
+html {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	font-family: $font-default;
+	background-color: #000;
+	
+	color: #FFF;
+	min-height: 100vh;
+	height: 100%;
+	margin: 0;
+}
+
+// @media (max-width: 800px) {
+// 	body {
+// 		background: url(./img/cosmos.jpg)
+// 	}
+// 	#video {
+// 		display: none;	
+// 	}
+// }
+
+.container {
+	display: flex;
+	justify-content: center;
+}
+
+.text {
+	margin: 0;
+}
+
+.clock {
+	position: absolute;
+	top	: 200px;
+	pointer-events: none;
+	// width: 760px;
+}
+
+h1 {
+	// display: block;
+	font-size: 80px;	
+}
+
+@media (min-width: 960px) {
+	h1 {
+		font-size: 250px;
+	}
+}
+
+
+h2 {
+	font-size: 60px;	
+   
+}
+
+@media (min-width: 960px) {
+	h2 {
+		font-size: 200px;
+	}
+}
+
+.ship {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+.fade {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(255, 155, 0, .15);
+	background-image: url('./noise.webp');
+	background-size: auto 100%;
+	background-repeat: repeat-x;
+
+	z-index: 0;
+}
+
+video {
+	pointer-events: none;
+}
+
