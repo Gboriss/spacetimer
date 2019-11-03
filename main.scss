@@ -1,9 +1,9 @@
 @import './variables.scss';
 
 @font-face {
-	font-family: "futura";
-	src: url("./assets/fonts/anonymous/bold.woff2") format("woff2"),
-		 url("./assets/fonts/anonymous/bold.woff") format("woff");
+	font-family: 'futura';
+	src: url('./assets/fonts/anonymous/bold.woff2') format('woff2'),
+		 url('./assets/fonts/anonymous/bold.woff') format('woff');
 	font-weight: 700;
 	font-style: normal;
 }
@@ -14,13 +14,14 @@ html {
 }
 
 body {
+	position: relative;
 	font-family: $font-default;
 	background-color: #000;
-	
-	color: #FFF;
-	min-height: 100vh;
 	height: 100%;
+	color: #FFF;
 	margin: 0;
+	overflow: hidden;
+	pointer-events: none;
 }
 
 // @media (max-width: 800px) {
@@ -32,20 +33,21 @@ body {
 // 	}
 // }
 
-.container {
+main {
 	display: flex;
 	justify-content: center;
 }
 
-.text {
+h1, h2 {
 	margin: 0;
 }
 
-.clock {
+article {
 	position: absolute;
 	top	: 200px;
 	pointer-events: none;
 	// width: 760px;
+	opacity: 0;
 }
 
 h1 {
@@ -86,7 +88,7 @@ h2 {
 	right: 0;
 	bottom: 0;
 	background-color: rgba(255, 155, 0, .15);
-	background-image: url('./noise.webp');
+	background-image: url('./assets/img/noise.webp');
 	background-size: auto 100%;
 	background-repeat: repeat-x;
 
@@ -94,6 +96,8 @@ h2 {
 }
 
 video {
+	position: absolute;
+	top: 0;
+	left: 0;
 	pointer-events: none;
 }
-
