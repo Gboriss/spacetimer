@@ -8,31 +8,32 @@
 	<link rel="stylesheet" href="./main.scss">
 </head>
 <body>
+	<main>
+		<video 
+			id="video"
+			autosplay
+			loop
+			muted
+			playsinline
+			poster="./assets/video/poster.jpg"
+		>
+			<source
+				src="./assets/video/space1_2.mp4"
+				type="video/mp4"
+			>
+		</video>
 
-	
 
-	<div class="container">
+		<div class="fade"></div>
 
-	<img src="./img/ship.svg" class="ship">
+		<img src="./assets/img/ship.svg" class="ship">
 
-	<video 
-		id="video"
-		width="560" 
-		height="315" 
-		autoplay
-		loop
-		preload
-	>
-		<source src="./video/space1_2.mp4">
- 	</video>
-
-	<div class="fade"> </div> 
-
-		<article class="clock">
-			<h1 class="text" id="days">
-			<h2 class="text dynamic" id="dynamic">
+		<article>
+			<h1 id="days">
+			<h2 id="time">
 		</article>
-	</div>
+
+	</main>
 
 	<script src="./main.js"></script>
 	<script src="./video.js"></script>
