@@ -1,6 +1,7 @@
 let video = document.getElementById('video')
 let viewport = document.getElementById('viewport')
 
+video.play()
 
 document.addEventListener('click', () => {
 	video.play()
@@ -36,6 +37,9 @@ function setSize(W, H) {
 setSize(window.innerWidth, window.innerHeight)
 
 window.addEventListener('resize', () => setSize(window.innerWidth, window.innerHeight))
+
+
+
 // window.addEventListener('orientationchange', () => {
 
 // 	setTimeout(() => {
