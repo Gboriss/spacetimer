@@ -22,16 +22,17 @@ body {
 	margin: 0;
 	overflow: hidden;
 	pointer-events: none;
+	padding: 0;
 }
 
-// @media (max-width: 800px) {
-// 	body {
-// 		background: url(./img/cosmos.jpg)
-// 	}
-// 	#video {
-// 		display: none;	
-// 	}
-// }
+@media (max-width: 720px) {
+	body {
+		background: url(./assets/img/cosmos.jpg)
+	}
+	#video {
+		display: none;	
+	}
+}
 
 main {
 	display: flex;
@@ -43,8 +44,11 @@ h1, h2 {
 }
 
 article {
+	// display: flex;
+	// flex-direction: column;
+
 	position: absolute;
-	top	: 300px;
+	top	: 200px;
 	pointer-events: none;
 	// width: 760px;
 }
@@ -54,9 +58,9 @@ h1 {
 	font-size: 80px;	
 }
 
-@media (min-width: 960px) {
+@media (min-width: 720px) {
 	h1 {
-		font-size: 130px;
+		font-size: 250px;
 	}
 }
 
@@ -66,19 +70,26 @@ h2 {
    
 }
 
-@media (min-width: 960px) {
+@media (min-width: 720px) {
 	h2 {
-		font-size: 120px;
+		font-size: 220px;
 	}
 }
 
-.ship {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-}
+// .ship {
+// 	position: fixed;
+// 	top: 0;
+// 	bottom: 0;
+// 	right: 0;
+// 	left: 0;
+// 	background-image: none; 
+// }
+
+// @media (min-width: 960px) {
+// 	.ship {
+// 		background-image: url(./assets/img/ship.svg)
+// 	}
+// }
 
 .fade {
 	position: fixed;
